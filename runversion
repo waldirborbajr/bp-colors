@@ -29,6 +29,12 @@ elif [ "$MINOR" ]; then
     VNUM3=0
 else
     echo "Update patch version"
+    if [ -z "$VNUM1" ]; then
+        VNUM1=0
+    fi
+    if [ -z "$VNUM2" ]; then
+        VNUM2=0
+    fi
     VNUM3=$((VNUM3+1))
 fi
 
